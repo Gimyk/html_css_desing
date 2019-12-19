@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Board</title>
+    <link rel="stylesheet" href="css/bord.css">
+</head>
+
+<body>
+    <div class="contain">
+
+    </div>
+
+    <script>
+        var num = true;
+        setInterval(() => {
+            const cn = document.querySelector('.contain');
+            if (num) {
+                cn.style.boxShadow = "-2px 3px 26px -7px black";
+                num = false;
+            } else {
+                cn.style.boxShadow = "none";
+                num = true;
+            }
+
+            console.log('something');
+        }, 2000);
+        console.log("creds to https://www.youtube.com/watch?v=ds8ymUkqvmo")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  background-image: url("../images/green.jpg");
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.contain {
+  position: fixed;
+  transition: 1s;
+  top: 3em;
+  right: 1em;
+  left: 1em;
+  bottom: 4em;
+  margin: 4em auto;
+  background-image: url("../images/green.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5),
+                  0 0 0 100px rgba(0, 0, 0, 0.1);
+}

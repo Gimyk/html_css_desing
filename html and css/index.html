@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contain">
+        <img src="images/flower.jpg" tabindex="1">
+        <img src="images/galaxy.jpg" tabindex="2">
+        <img src="images/green.jpg" tabindex="3">
+        <img src="images/moon.jpg" tabindex="4">
+        <img src="images/watch.jpg" tabindex="5">
+    </div>
+
+    <script>
+        // At start, set focus on the first div
+        document.getElementsByTagName('img')[0].focus();
+
+        const im = document.getElementsByTagName('img');
+        for (const i of im) {
+            ['focus', 'click'].forEach(evt => {
+                i.addEventListener(evt, function () {
+                    this.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                });
+            });
+        }
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        // setInterval(() => {
+        //     const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        //     document.querySelector('.contain')
+        //     .style.backgroundColor = rndCol;
+        // }, 2000);
+        console.log("creds to https://www.youtube.com/watch?v=ds8ymUkqvmo")
+    </script>
+</body>
+
+</html>
