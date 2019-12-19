@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(214, 206, 206);
+    // background: #222;
+    h1 {
+        position: relative;
+        font-size: 5em;
+        color: #222;
+        text-transform: uppercase;
+        border-bottom: 10px solid #222;
+        letter-spacing: 0.05em;
+        line-height: 1.2em;
+        &:before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #03a9f4;
+            overflow: hidden;
+            border-bottom: 10px solid #03a9f4;
+            animation: animate 10s linear infinite;
+        }
+        @keyframes animate {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    }
+}

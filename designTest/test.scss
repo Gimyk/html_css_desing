@@ -1,0 +1,159 @@
+// @import url('https://fonts.googleapis.com/css?family=Barriecito|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barriecito|Montserrat:300&display=swap');
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    // background: black;
+}
+
+@mixin mobi {
+    @media (max-width: 780px) {
+        @content;
+    }
+}
+
+.first,
+.second,
+.third,
+.fourth {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 97%;
+    transition: all 2s;
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        h3 {
+            font-family: 'Barriecito', cursive;
+            font-size: 2em;
+            color: aliceblue;
+        }
+        p {
+            padding: 10px;
+            background: rgba(27, 25, 25, 0.301);
+            color: white;
+            width: 50%;
+            text-align: center;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+}
+
+.index {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-90deg);
+    width: 3%;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    @include mobi {
+        margin: 0;
+        width: 10%;
+    }
+    z-index: 1;
+}
+
+// .index {
+//     top: 0;
+// }
+.fourth {
+    clip-path: polygon(3% 0%, 3% 80%, 0% 80%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #2F394D;
+    border: solid thick #E71D36;
+    z-index: 4;
+    .content {
+        background: url('images/front.png') repeat 35% 35%;
+    }
+    @include mobi {
+        margin: 0;
+        clip-path: polygon(10% 0%, 10% 80%, 0% 80%, 0% 100%, 100% 100%, 100% 0%);
+    }
+    .index {
+        top: 80%;
+    }
+}
+
+.third {
+    clip-path: polygon(3% 0%, 3% 60%, 0% 60%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #E71D36;
+    border: solid thin #2F394D;
+    z-index: 3;
+    .content {
+        background: url('images/front.png') repeat 35% 35%;
+    }
+    @include mobi {
+        clip-path: polygon(10% 0%, 10% 60%, 0% 60%, 0% 100%, 100% 100%, 100% 0%);
+        margin: 0;
+    }
+    .index {
+        top: 60%;
+    }
+}
+
+.second {
+    clip-path: polygon(3% 0%, 3% 40%, 0% 40%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #2E294E;
+    z-index: 2;
+    .content {
+        background: url('images/front.png') repeat 35% 35%;
+    }
+    @include mobi {
+        clip-path: polygon(10% 0%, 10% 40%, 0% 40%, 0% 100%, 100% 100%, 100% 0%);
+        margin: 0;
+    }
+    .index {
+        top: 40%;
+    }
+}
+
+.first {
+    clip-path: polygon(3% 0%, 3% 20%, 0% 20%, 0% 100%, 100% 100%, 100% 0%);
+    background-color: #7C9EB2;
+    border: solid thick #2F394D;
+    z-index: 1;
+    .content {
+        background: url('images/front.png') repeat 35% 35%;
+    }
+    @include mobi {
+        clip-path: polygon(10% 0%, 10% 20%, 0% 20%, 0% 100%, 100% 100%, 100% 0%);
+        margin: 0;
+    }
+    .index {
+        top: 20%;
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    header {
+        width: 10em;
+        height: 2em;
+        border: solid thin rgb(145, 142, 142);
+        text-align: center;
+        padding: 13px 2px 0 2px;
+        margin: 2em;
+        box-shadow: 0px 1px 2px 2px rgba(216, 216, 216, 0.562);
+        border-radius: 5px;
+    }
+}
